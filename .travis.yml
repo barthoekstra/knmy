@@ -8,4 +8,5 @@ script:
   - py.test
 after_success:
   - pip install coveralls
+  - coverage run --source=knmy setup.py test
   - coveralls -v

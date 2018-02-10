@@ -4,5 +4,3 @@ sphinx_rtd_theme
 pytest
 requests
 pandas
-#coverage
-#coveralls
