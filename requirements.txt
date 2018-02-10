@@ -2,6 +2,6 @@
 sphinx
 sphinx_rtd_theme
 pytest
-coverage
 requests
 pandas
+coveralls
