@@ -38,7 +38,7 @@ def parse_raw_weather_data(raw):
         try:
             number, longitude, latitude, altitude, name = station_attribute
         except ValueError:
-            print(f'Metadata for station {station_attribute[0]} is invalid')
+            print('Metadata for station {} is invalid'.format(station_attribute[0]))
         else:
             station_line = ','.join([number, name, latitude, longitude, altitude])
             station_lines.append(station_line)
