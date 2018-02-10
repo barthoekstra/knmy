@@ -1,0 +1,61 @@
+# BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
+# Opmerking: door stationsverplaatsingen en veranderingen in waarneemmethodieken zijn deze tijdreeksen van dagwaarden mogelijk inhomogeen! Dat betekent dat deze reeks van gemeten waarden niet geschikt is voor trendanalyse. Voor studies naar klimaatverandering verwijzen we naar de gehomogeniseerde reeks maandtemperaturen van De Bilt <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/gehomogeniseerde-reeks-maandtemperaturen-de-bilt> of de Centraal Nederland Temperatuur <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/centraal-nederland-temperatuur-cnt>.
+# 
+# 
+# STN      LON(east)   LAT(north)     ALT(m)  NAME
+# 209:         4.518       52.465       0.00  IJMOND
+# 235:         4.781       52.928       1.20  DE KOOY
+# 
+# YYYYMMDD = Date (YYYY=year MM=month DD=day); 
+# DDVEC    = Vector mean wind direction in degrees (360=north, 90=east, 180=south, 270=west, 0=calm/variable); 
+# FHVEC    = Vector mean windspeed (in 0.1 m/s); 
+# FG       = Daily mean windspeed (in 0.1 m/s); 
+# FHX      = Maximum hourly mean windspeed (in 0.1 m/s); 
+# FHXH     = Hourly division in which FHX was measured; 
+# FHN      = Minimum hourly mean windspeed (in 0.1 m/s); 
+# FHNH     = Hourly division in which FHN was measured; 
+# FXX      = Maximum wind gust (in 0.1 m/s); 
+# FXXH     = Hourly division in which FXX was measured; 
+# TG       = Daily mean temperature in (0.1 degrees Celsius); 
+# TN       = Minimum temperature (in 0.1 degrees Celsius); 
+# TNH      = Hourly division in which TN was measured; 
+# TX       = Maximum temperature (in 0.1 degrees Celsius); 
+# TXH      = Hourly division in which TX was measured; 
+# T10N     = Minimum temperature at 10 cm above surface (in 0.1 degrees Celsius); 
+# T10NH    = 6-hourly division in which T10N was measured; 6=0-6 UT, 12=6-12 UT, 18=12-18 UT, 24=18-24 UT
+# SQ       = Sunshine duration (in 0.1 hour) calculated from global radiation (-1 for <0.05 hour); 
+# SP       = Percentage of maximum potential sunshine duration; 
+# Q        = Global radiation (in J/cm2); 
+# DR       = Precipitation duration (in 0.1 hour); 
+# RH       = Daily precipitation amount (in 0.1 mm) (-1 for <0.05 mm); 
+# RHX      = Maximum hourly precipitation amount (in 0.1 mm) (-1 for <0.05 mm); 
+# RHXH     = Hourly division in which RHX was measured; 
+# EV24     = Potential evapotranspiration (Makkink) (in 0.1 mm); 
+# PG       = Daily mean sea level pressure (in 0.1 hPa) calculated from 24 hourly values; 
+# PX       = Maximum hourly sea level pressure (in 0.1 hPa); 
+# PXH      = Hourly division in which PX was measured; 
+# PN       = Minimum hourly sea level pressure (in 0.1 hPa); 
+# PNH      = Hourly division in which PN was measured; 
+# VVN      = Minimum visibility; 0: <100 m, 1:100-200 m, 2:200-300 m,..., 49:4900-5000 m, 50:5-6 km, 56:6-7 km, 57:7-8 km,..., 79:29-30 km, 80:30-35 km, 81:35-40 km,..., 89: >70 km)
+# VVNH     = Hourly division in which VVN was measured; 
+# VVX      = Maximum visibility; 0: <100 m, 1:100-200 m, 2:200-300 m,..., 49:4900-5000 m, 50:5-6 km, 56:6-7 km, 57:7-8 km,..., 79:29-30 km, 80:30-35 km, 81:35-40 km,..., 89: >70 km)
+# VVXH     = Hourly division in which VVX was measured; 
+# NG       = Mean daily cloud cover (in octants, 9=sky invisible); 
+# UG       = Daily mean relative atmospheric humidity (in percents); 
+# UX       = Maximum relative atmospheric humidity (in percents); 
+# UXH      = Hourly division in which UX was measured; 
+# UN       = Minimum relative atmospheric humidity (in percents); 
+# UNH      = Hourly division in which UN was measured; 
+# 
+# STN,YYYYMMDD,DDVEC,FHVEC,   FG,  FHX, FHXH,  FHN, FHNH,  FXX, FXXH,   TG,   TN,  TNH,   TX,  TXH, T10N,T10NH,   SQ,   SP,    Q,   DR,   RH,  RHX, RHXH, EV24,   PG,   PX,  PXH,   PN,  PNH,  VVN, VVNH,  VVX, VVXH,   NG,   UG,   UX,  UXH,   UN,  UNH
+# 
+  209,20170101,  207,   77,   95,  130,    9,   20,   21,  150,    3,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     
+  209,20170102,  339,   82,   88,  110,    7,   60,   21,  160,   12,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     
+  209,20170103,  275,  107,  109,  120,   16,   90,    1,  160,   24,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     
+  209,20170104,  329,  126,  130,  160,   14,   80,   22,  220,    8,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     
+  209,20170105,   56,   40,   57,  110,    1,   30,   20,  170,    4,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     
+  235,20170101,  221,   51,   64,   90,    6,   10,   18,  140,    6,   58,   39,   15,   81,    1,   33,   24,    0,    0,   48,   59,   26,   15,   17,    1,10167,10204,    1,10140,   15,   17,    6,   75,   23,    8,   92,   96,   13,   77,   23
+  235,20170102,  330,   42,   46,   60,   12,   30,   18,  130,    6,   53,   30,   18,   71,   12,   21,   24,   40,   52,  270,   16,   18,    4,   17,    3,10229,10244,   18,10196,    1,   64,    1,   80,   11,    5,   73,   88,   17,   61,    5
+  235,20170103,  278,   82,   83,  100,   10,   50,    3,  140,   10,   67,   53,    3,   79,   23,   44,    6,    2,    3,   96,    7,    4,    2,    1,    1,10197,10238,    3,10145,   24,   50,   23,   75,    2,    7,   83,   89,   23,   76,   10
+  235,20170104,  327,   77,   80,  110,    8,   40,   22,  250,    8,   64,   34,   24,   83,    2,   24,   24,   31,   40,  248,   14,   28,   10,    3,    3,10167,10235,   24,10132,    5,   50,    1,   79,   21,    5,   70,   91,    1,   58,   20
+  235,20170105,   77,   27,   36,   50,    2,   10,    7,  100,    2,   16,  -25,   24,   56,    2,  -48,   24,   51,   66,  335,    3,    2,    1,    4,    4,10332,10400,   24,10238,    1,   63,    3,   82,   11,    4,   74,   90,    6,   61,   13

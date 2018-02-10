@@ -1,0 +1,25 @@
+# BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
+# Opmerking: door stationsverplaatsingen en veranderingen in waarneemmethodieken zijn deze tijdreeksen van dagwaarden mogelijk inhomogeen! Dat betekent dat deze reeks van gemeten waarden niet geschikt is voor trendanalyse. Voor studies naar klimaatverandering verwijzen we naar de gehomogeniseerde reeks maandtemperaturen van De Bilt <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/gehomogeniseerde-reeks-maandtemperaturen-de-bilt> of de Centraal Nederland Temperatuur <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/centraal-nederland-temperatuur-cnt>.
+# 
+# 
+# STN      LON(east)   LAT(north)     ALT(m)  NAME
+# 209:         4.518       52.465       0.00  IJMOND
+# 
+# YYYYMMDD = Date (YYYY=year MM=month DD=day); 
+# DDVEC    = Vector mean wind direction in degrees (360=north, 90=east, 180=south, 270=west, 0=calm/variable); 
+# FHVEC    = Vector mean windspeed (in 0.1 m/s); 
+# FG       = Daily mean windspeed (in 0.1 m/s); 
+# FHX      = Maximum hourly mean windspeed (in 0.1 m/s); 
+# FHXH     = Hourly division in which FHX was measured; 
+# FHN      = Minimum hourly mean windspeed (in 0.1 m/s); 
+# FHNH     = Hourly division in which FHN was measured; 
+# FXX      = Maximum wind gust (in 0.1 m/s); 
+# FXXH     = Hourly division in which FXX was measured; 
+# 
+# STN,YYYYMMDD,DDVEC,FHVEC,   FG,  FHX, FHXH,  FHN, FHNH,  FXX, FXXH
+# 
+  209,20170101,  207,   77,   95,  130,    9,   20,   21,  150,    3
+  209,20170102,  339,   82,   88,  110,    7,   60,   21,  160,   12
+  209,20170103,  275,  107,  109,  120,   16,   90,    1,  160,   24
+  209,20170104,  329,  126,  130,  160,   14,   80,   22,  220,    8
+  209,20170105,   56,   40,   57,  110,    1,   30,   20,  170,    4

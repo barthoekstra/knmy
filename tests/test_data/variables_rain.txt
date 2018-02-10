@@ -1,0 +1,16 @@
+STN      = stationsnummer/stationnumber
+YYYYMMDD = datum/date (YYYY=jaar/year MM=maand/month DD=dag/day)
+RD       = som van de neerslag in tiende millimeters van 08.00 - 08.00 UTC/
+           daily precipitation amount in 0.1 mm over the period 08.00 - 08.00 UTC
+SX       = codecijfer sneeuwdek om 08.00 uur UTC/code for the snow cover at 08.00 UTC:
+
+           codecijfer/code    sneeuwdikte/snow cover
+           1                                    1 cm
+           ...                                   ...
+           996                                996 cm
+
+           997 gebroken sneeuwdek/broken snow cover < 1 cm
+           998 gebroken sneeuwdek/broken snow cover >=1 cm
+           999 sneeuwhopen/snow dunes
+
+5 spaties betekent een ontbrekende waarde/5 spaces represents a missing value
