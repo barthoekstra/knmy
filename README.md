@@ -5,7 +5,7 @@ knmy
 [![Documentation Status](https://readthedocs.org/projects/knmy/badge/?version=latest)](http://knmy.readthedocs.io/en/latest/?badge=latest)
 
 
-version number: 0.0.1
+version number: 1.0.0
 author: Bart Hoekstra
 
 Overview
@@ -16,4 +16,4 @@ Python package for downloading and processing weather data from the automated we
 Documentation
 -------------
 
-Documentation can be found on [Read the Docs](http://knmy.readthedocs.io/)
+Documentation can be found on [Read the Docs](http://knmy.readthedocs.io/).
