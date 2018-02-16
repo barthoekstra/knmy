@@ -7,6 +7,8 @@ knmy - A simple Python wrapper for Dutch weather data from KNMI
 .. image:: https://readthedocs.org/projects/knmy/badge/?version=latest
     :target: http://knmy.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
+.. image:: https://badge.fury.io/py/knmy.svg
+    :target: https://badge.fury.io/py/knmy
 
 knmy is a Python package for downloading and processing weather data from the automated weather stations of the Dutch
 Meteorological Institute (KNMI). Documentation of the used API can be
