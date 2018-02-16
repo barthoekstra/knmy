@@ -51,7 +51,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
     """
     urls = {'daily': 'http://projects.knmi.nl/klimatologie/daggegevens/getdata_dag.cgi',
             'hourly': 'http://projects.knmi.nl/klimatologie/uurgegevens/getdata_uur.cgi',
-            'rain_daily': 'http://projects.knmi.nl/klimatologie/monv/reeksen/getdata_rr.cgi'}
+            'daily_rain': 'http://projects.knmi.nl/klimatologie/monv/reeksen/getdata_rr.cgi'}
 
     if stations is not None:
         params = dict(stns=':'.join(str(station) for station in stations))
@@ -132,7 +132,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
         raise requests.HTTPError(r.status_code, urls[type], params)
 
     if parse:
-        if type != 'rain_daily':
+        if type != 'daily_rain':
             return parse_raw_weather_data(r.text)
         else:
             return parse_raw_rain_data(r.text)
@@ -174,7 +174,8 @@ def get_daily_data(stations=None, start=None, end=None, variables=None, inseason
             disclaimer, stations, variables, data = get_daily_data(...)
 
     """
-    return get_knmi_data('daily', stations, start, end, variables, inseason, parse)
+    return get_knmi_data('daily', stations=stations, start=start, end=end, variables=variables, inseason=inseason,
+                         parse=parse)
 
 
 def get_hourly_data(stations=None, start=None, end=None, variables=None, inseason=None, parse=None):
@@ -210,7 +211,8 @@ def get_hourly_data(stations=None, start=None, end=None, variables=None, inseaso
         Unpack output as follows:
             disclaimer, stations, variables, data = get_hourly_data(...)
     """
-    return get_knmi_data('hourly', stations, start, end, variables, inseason, parse)
+    return get_knmi_data('hourly', stations=stations, start=start, end=end, variables=variables, inseason=inseason,
+                         parse=parse)
 
 
 def get_daily_rain_data(stations=None, start=None, end=None, parse=None):
@@ -235,4 +237,4 @@ def get_daily_rain_data(stations=None, start=None, end=None, parse=None):
             data: (DataFrame) pandas dataframe containing the daily rain data, which is a static set of measurements
                 (see variables for details and interpretation of the measurements)
     """
-    return get_knmi_data('rain_daily', stations, start, end, parse)
+    return get_knmi_data('daily_rain', stations=stations, start=start, end=end, parse=parse)
