@@ -41,3 +41,9 @@ output/
 
 # MacOS
 .DS_Store
+
+
+# Build and docs folders/files
+build/*
+dist/*
+sdist/*
