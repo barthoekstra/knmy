@@ -49,9 +49,9 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
         Unpack output as follows:
             disclaimer, stations, variables, data = get_knmi_data(...)
     """
-    urls = {'daily': 'http://projects.knmi.nl/klimatologie/daggegevens/getdata_dag.cgi',
-            'hourly': 'http://projects.knmi.nl/klimatologie/uurgegevens/getdata_uur.cgi',
-            'daily_rain': 'http://projects.knmi.nl/klimatologie/monv/reeksen/getdata_rr.cgi'}
+    urls = {'daily': 'https://www.daggegevens.knmi.nl/klimatologie/daggegevens',
+            'hourly': 'https://www.daggegevens.knmi.nl/klimatologie/uurgegevens',
+            'daily_rain': 'https://www.daggegevens.knmi.nl/klimatologie/monv/reeksen'}
 
     if stations is not None:
         params = dict(stns=':'.join(str(station) for station in stations))
