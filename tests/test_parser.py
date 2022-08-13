@@ -51,7 +51,7 @@ def test_rain_variables():
     with open('tests/test_data/variables_rain.txt') as f:
         variables_rain_reference = f.read()
 
-    assert variables_rain.strip() == variables_rain_reference.strip()
+    assert str(variables_rain) == variables_rain_reference
 
 def test_rain_data():
     data_string = data_rain.to_csv()

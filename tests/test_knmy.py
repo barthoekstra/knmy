@@ -98,6 +98,6 @@ def test_get_daily_rain_data():
 def output_comparison(output, reference):
     with open('tests/test_data/' + reference) as f:
         reference_output = f.read()
-        reference_output = reference_output.replace('\r', '')
-        output = output.replace('\r', '')
+        reference_output = reference_output.replace(' ', '')
+        output = output.replace(' ', '')
         assert reference_output == output

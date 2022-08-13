@@ -1,154 +1,174 @@
-# BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
-# Opmerking: door stationsverplaatsingen en veranderingen in waarneemmethodieken zijn deze tijdreeksen van uurwaarden mogelijk inhomogeen! Dat betekent dat deze reeks van gemeten waarden niet geschikt is voor trendanalyse. Voor studies naar klimaatverandering verwijzen we naar de gehomogeniseerde reeks maandtemperaturen van De Bilt <http://www.knmi.nl/klimatologie/onderzoeksgegevens/homogeen_260/index.html> of de Centraal Nederland Temperatuur <http://www.knmi.nl/klimatologie/onderzoeksgegevens/CNT/>.
-# 
-# 
-# STN      LON(east)   LAT(north)     ALT(m)  NAME
-# 209:         4.518       52.465       0.00  IJMOND
-# 
-# YYYYMMDD = datum (YYYY=jaar,MM=maand,DD=dag); 
-# HH       = tijd (HH=uur, UT.12 UT=13 MET, 14 MEZT. Uurvak 05 loopt van 04.00 UT tot 5.00 UT; 
-# DD       = Windrichting (in graden) gemiddeld over de laatste 10 minuten van het afgelopen uur (360=noord, 90=oost, 180=zuid, 270=west, 0=windstil 990=veranderlijk. Zie http://www.knmi.nl/kennis-en-datacentrum/achtergrond/klimatologische-brochures-en-boeken; 
-# FH       = Uurgemiddelde windsnelheid (in 0.1 m/s). Zie http://www.knmi.nl/kennis-en-datacentrum/achtergrond/klimatologische-brochures-en-boeken; 
-# FF       = Windsnelheid (in 0.1 m/s) gemiddeld over de laatste 10 minuten van het afgelopen uur; 
-# FX       = Hoogste windstoot (in 0.1 m/s) over het afgelopen uurvak; 
-# T        = Temperatuur (in 0.1 graden Celsius) op 1.50 m hoogte tijdens de waarneming; 
-# T10N     = Minimumtemperatuur (in 0.1 graden Celsius) op 10 cm hoogte in de afgelopen 6 uur; 
-# TD       = Dauwpuntstemperatuur (in 0.1 graden Celsius) op 1.50 m hoogte tijdens de waarneming; 
-# SQ       = Duur van de zonneschijn (in 0.1 uren) per uurvak, berekend uit globale straling  (-1 for <0.05 uur); 
-# Q        = Globale straling (in J/cm2) per uurvak; 
-# DR       = Duur van de neerslag (in 0.1 uur) per uurvak; 
-# RH       = Uursom van de neerslag (in 0.1 mm) (-1 voor <0.05 mm); 
-# P        = Luchtdruk (in 0.1 hPa) herleid naar zeeniveau, tijdens de waarneming; 
-# VV       = Horizontaal zicht tijdens de waarneming (0=minder dan 100m, 1=100-200m, 2=200-300m,..., 49=4900-5000m, 50=5-6km, 56=6-7km, 57=7-8km, ..., 79=29-30km, 80=30-35km, 81=35-40km,..., 89=meer dan 70km); 
-# N        = Bewolking (bedekkingsgraad van de bovenlucht in achtsten), tijdens de waarneming (9=bovenlucht onzichtbaar); 
-# U        = Relatieve vochtigheid (in procenten) op 1.50 m hoogte tijdens de waarneming; 
-# WW       = Weercode (00-99), visueel(WW) of automatisch(WaWa) waargenomen, voor het actuele weer of het weer in het afgelopen uur. Zie http://bibliotheek.knmi.nl/scholierenpdf/weercodes_Nederland; 
-# IX       = Weercode indicator voor de wijze van waarnemen op een bemand of automatisch station (1=bemand gebruikmakend van code uit visuele waarnemingen, 2,3=bemand en weggelaten (geen belangrijk weersverschijnsel, geen gegevens), 4=automatisch en opgenomen (gebruikmakend van code uit visuele waarnemingen), 5,6=automatisch en weggelaten (geen belangrijk weersverschijnsel, geen gegevens), 7=automatisch gebruikmakend van code uit automatische waarnemingen); 
-# M        = Mist 0=niet voorgekomen, 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming; 
-# R        = Regen 0=niet voorgekomen, 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming; 
-# S        = Sneeuw 0=niet voorgekomen, 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming; 
-# O        = Onweer 0=niet voorgekomen, 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming; 
-# Y        = IJsvorming 0=niet voorgekomen, 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming; 
-# 
-# STN,YYYYMMDD,   HH,   DD,   FH,   FF,   FX,    T,  T10,   TD,   SQ,    Q,   DR,   RH,    P,   VV,    N,    U,   WW,   IX,    M,    R,    S,    O,    Y
-# 
-  209,20170101,    1,  210,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    2,  210,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    3,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    4,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    5,  200,  120,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    6,  210,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    7,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    8,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,    9,  220,  130,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   10,  200,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   11,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   12,  210,  110,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   13,  200,  110,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   14,  200,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   15,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   16,  200,  110,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   17,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   18,  210,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   19,  360,   50,   70,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   20,   80,   60,   40,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   21,   10,   20,   20,   40,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   22,  340,   20,   10,   30,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   23,  360,   20,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170101,   24,  360,   70,   80,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    1,  360,   90,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    2,   20,   90,   70,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    3,  360,   90,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    4,  360,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    5,  350,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    6,  350,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    7,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    8,  340,  110,  100,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,    9,  350,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   10,  350,   90,   80,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   11,  330,   80,   90,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   12,  350,   90,   80,  160,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   13,  330,   90,   90,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   14,  360,   80,   50,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   15,  330,   70,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   16,  340,  100,   90,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   17,  310,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   18,  320,   90,   80,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   19,  300,   90,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   20,  310,   80,  100,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   21,  330,   60,   90,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   22,  320,   60,   60,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   23,  300,   60,   80,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170102,   24,  300,   80,   80,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    1,  300,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    2,  280,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    3,  290,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    4,  280,  100,   90,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    5,  280,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    6,  270,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    7,  270,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    8,  280,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,    9,  260,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   10,  260,  110,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   11,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   12,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   13,  270,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   14,  260,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   15,  270,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   16,  270,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   17,  270,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   18,  270,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   19,  270,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   20,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   21,  280,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   22,  280,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   23,  290,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170103,   24,  290,  120,  120,  160,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    1,  300,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    2,  300,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    3,  300,  130,  120,  180,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    4,  310,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    5,  320,  120,  120,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    6,  320,  130,  130,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    7,  320,  130,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    8,  340,  150,  170,  220,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,    9,  330,  150,  130,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   10,  320,  140,  160,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   11,  330,  150,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   12,  330,  150,  160,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   13,  330,  150,  160,  200,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   14,  330,  160,  160,  200,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   15,  330,  160,  150,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   16,  330,  150,  140,  220,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   17,  340,  140,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   18,  340,  130,  120,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   19,  350,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   20,  350,  110,  110,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   21,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   22,  350,   80,  110,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   23,  350,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170104,   24,  340,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    1,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    2,  350,  110,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    3,  340,  110,   90,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    4,   50,  100,   70,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    5,   30,   60,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    6,   10,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    7,   50,   60,   60,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    8,   50,   40,   50,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,    9,   60,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   10,   90,   60,   60,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   11,   90,   40,   50,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   12,   70,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   13,   90,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   14,   70,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   15,   60,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   16,   90,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   17,   90,   60,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   18,  100,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   19,  110,   40,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   20,  110,   30,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   21,  120,   30,   30,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   22,  110,   40,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   23,  110,   40,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
-  209,20170105,   24,  120,   40,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,     
+# Opmerking: door stationsverplaatsingen en veranderingen in waarneemmethodieken zijn deze tijdreeksen van uurwaarden mogelijk inhomogeen! Dat betekent dat deze reeks van gemeten waarden niet geschikt is voor trendanalyse. Voor studies naar klimaatverandering verwijzen we naar de gehomogeniseerde dagreeksen <http://www.knmi.nl/nederland-nu/klimatologie/daggegevens> of de Centraal Nederland Temperatuur <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/centraal-nederland-temperatuur-cnt>.
+#
+# SOURCE: ROYAL NETHERLANDS METEOROLOGICAL INSTITUTE (KNMI)
+"# Comment: These time series are inhomogeneous because of station relocations and changes in observation techniques. As a result, these series are not suitable for trend analysis. For climate change studies we refer to the homogenized series of daily data <http://www.knmi.nl/nederland-nu/klimatologie/daggegevens> or the Central Netherlands Temperature <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/centraal-nederland-temperatuur-cnt>."
+#
+# STN         LON(east)   LAT(north)  ALT(m)      NAME
+# 209         4.518       52.465      0.00        IJmond
+# DD        : Windrichting (in graden) gemiddeld over de laatste 10 minuten van het afgelopen uur (360=noord; 90=oost; 180=zuid; 270=west; 0=windstil 990=veranderlijk. Zie http://www.knmi.nl/kennis-en-datacentrum/achtergrond/klimatologische-brochures-en-boeken / Mean wind direction (in degrees) during the 10-minute period preceding the time of observation (360=north; 90=east; 180=south; 270=west; 0=calm 990=variable)
+# FH        : Uurgemiddelde windsnelheid (in 0.1 m/s). Zie http://www.knmi.nl/kennis-en-datacentrum/achtergrond/klimatologische-brochures-en-boeken / Hourly mean wind speed (in 0.1 m/s)
+# FF        : Windsnelheid (in 0.1 m/s) gemiddeld over de laatste 10 minuten van het afgelopen uur / Mean wind speed (in 0.1 m/s) during the 10-minute period preceding the time of observation
+# FX        : Hoogste windstoot (in 0.1 m/s) over het afgelopen uurvak / Maximum wind gust (in 0.1 m/s) during the hourly division
+# T         : Temperatuur (in 0.1 graden Celsius) op 1.50 m hoogte tijdens de waarneming / Temperature (in 0.1 degrees Celsius) at 1.50 m at the time of observation
+# T10N      : Minimumtemperatuur (in 0.1 graden Celsius) op 10 cm hoogte in de afgelopen 6 uur / Minimum temperature (in 0.1 degrees Celsius) at 0.1 m in the preceding 6-hour period
+# TD        : Dauwpuntstemperatuur (in 0.1 graden Celsius) op 1.50 m hoogte tijdens de waarneming / Dew point temperature (in 0.1 degrees Celsius) at 1.50 m at the time of observation
+# SQ        : Duur van de zonneschijn (in 0.1 uren) per uurvak; berekend uit globale straling  (-1 for <0.05 uur) / Sunshine duration (in 0.1 hour) during the hourly division; calculated from global radiation (-1 for <0.05 hour)
+# Q         : Globale straling (in J/cm2) per uurvak / Global radiation (in J/cm2) during the hourly division
+# DR        : Duur van de neerslag (in 0.1 uur) per uurvak / Precipitation duration (in 0.1 hour) during the hourly division
+# RH        : Uursom van de neerslag (in 0.1 mm) (-1 voor <0.05 mm) / Hourly precipitation amount (in 0.1 mm) (-1 for <0.05 mm)
+# P         : Luchtdruk (in 0.1 hPa) herleid naar zeeniveau; tijdens de waarneming / Air pressure (in 0.1 hPa) reduced to mean sea level; at the time of observation
+# VV        : Horizontaal zicht tijdens de waarneming (0=minder dan 100m; 1=100-200m; 2=200-300m;...; 49=4900-5000m; 50=5-6km; 56=6-7km; 57=7-8km; ...; 79=29-30km; 80=30-35km; 81=35-40km;...; 89=meer dan 70km) / Horizontal visibility at the time of observation (0=less than 100m; 1=100-200m; 2=200-300m;...; 49=4900-5000m; 50=5-6km; 56=6-7km; 57=7-8km; ...; 79=29-30km; 80=30-35km; 81=35-40km;...; 89=more than 70km)
+# N         : Bewolking (bedekkingsgraad van de bovenlucht in achtsten); tijdens de waarneming (9=bovenlucht onzichtbaar) / Cloud cover (in octants); at the time of observation (9=sky invisible)
+# U         : Relatieve vochtigheid (in procenten) op 1.50 m hoogte tijdens de waarneming / Relative atmospheric humidity (in percents) at 1.50 m at the time of observation
+# WW        : Weercode (00-99); visueel(WW) of automatisch(WaWa) waargenomen; voor het actuele weer of het weer in het afgelopen uur. Zie http://bibliotheek.knmi.nl/scholierenpdf/weercodes_Nederland / Present weather code (00-99); description for the hourly division.
+# IX        : Weercode indicator voor de wijze van waarnemen op een bemand of automatisch station (1=bemand gebruikmakend van code uit visuele waarnemingen; 2;3=bemand en weggelaten (geen belangrijk weersverschijnsel; geen gegevens); 4=automatisch en opgenomen (gebruikmakend van code uit visuele waarnemingen); 5;6=automatisch en weggelaten (geen belangrijk weersverschijnsel; geen gegevens); 7=automatisch gebruikmakend van code uit automatische waarnemingen) / Indicator present weather code (1=manned and recorded (using code from visual observations); 2;3=manned and omitted (no significant weather phenomenon to report; not available); 4=automatically recorded (using code from visual observations); 5;6=automatically omitted (no significant weather phenomenon to report; not available); 7=automatically set (using code from automated observations)
+# M         : Mist 0=niet voorgekomen; 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming / Fog 0=no occurrence; 1=occurred during the preceding hour and/or at the time of observation
+# R         : Regen 0=niet voorgekomen; 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming / Rainfall 0=no occurrence; 1=occurred during the preceding hour and/or at the time of observation
+# S         : Sneeuw 0=niet voorgekomen; 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming / Snow 0=no occurrence; 1=occurred during the preceding hour and/or at the time of observation
+# O         : Onweer 0=niet voorgekomen; 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming / Thunder  0=no occurrence; 1=occurred during the preceding hour and/or at the time of observation
+# Y         : IJsvorming 0=niet voorgekomen; 1=wel voorgekomen in het voorgaande uur en/of tijdens de waarneming / Ice formation 0=no occurrence; 1=occurred during the preceding hour and/or at the time of observation
+# STN,YYYYMMDD,H,   DD,   FH,   FF,   FX,    T, T10N,   TD,   SQ,    Q,   DR,   RH,    P,   VV,    N,    U,   WW,   IX,    M,    R,    S,    O,    Y
+  209,20170101,    1,  210,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    2,  210,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    3,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    4,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    5,  200,  120,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    6,  210,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    7,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    8,  210,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,    9,  220,  130,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   10,  200,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   11,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   12,  210,  110,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   13,  200,  110,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   14,  200,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   15,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   16,  200,  110,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   17,  200,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   18,  210,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   19,  360,   50,   70,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   20,   80,   60,   40,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   21,   10,   20,   20,   40,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   22,  340,   20,   10,   30,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   23,  360,   20,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170101,   24,  360,   70,   80,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    1,  360,   90,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    2,   20,   90,   70,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    3,  360,   90,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    4,  360,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    5,  350,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    6,  350,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    7,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    8,  340,  110,  100,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,    9,  350,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   10,  350,   90,   80,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   11,  330,   80,   90,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   12,  350,   90,   80,  160,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   13,  330,   90,   90,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   14,  360,   80,   50,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   15,  330,   70,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   16,  340,  100,   90,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   17,  310,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   18,  320,   90,   80,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   19,  300,   90,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   20,  310,   80,  100,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   21,  330,   60,   90,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   22,  320,   60,   60,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   23,  300,   60,   80,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170102,   24,  300,   80,   80,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    1,  300,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    2,  280,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    3,  290,   90,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    4,  280,  100,   90,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    5,  280,  100,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    6,  270,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    7,  270,  110,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    8,  280,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,    9,  260,  100,  110,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   10,  260,  110,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   11,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   12,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   13,  270,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   14,  260,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   15,  270,  110,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   16,  270,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   17,  270,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   18,  270,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   19,  270,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   20,  270,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   21,  280,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   22,  280,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   23,  290,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170103,   24,  290,  120,  120,  160,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    1,  300,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    2,  300,  120,  120,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    3,  300,  130,  120,  180,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    4,  310,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    5,  320,  120,  120,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    6,  320,  130,  130,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    7,  320,  130,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    8,  340,  150,  170,  220,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,    9,  330,  150,  130,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   10,  320,  140,  160,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   11,  330,  150,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   12,  330,  150,  160,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   13,  330,  150,  160,  200,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   14,  330,  160,  160,  200,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   15,  330,  160,  150,  210,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   16,  330,  150,  140,  220,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   17,  340,  140,  140,  190,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   18,  340,  130,  120,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   19,  350,  120,  120,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   20,  350,  110,  110,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   21,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   22,  350,   80,  110,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   23,  350,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170104,   24,  340,  100,  100,  130,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    1,  350,  110,  110,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    2,  350,  110,  100,  140,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    3,  340,  110,   90,  150,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    4,   50,  100,   70,  170,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    5,   30,   60,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    6,   10,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    7,   50,   60,   60,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    8,   50,   40,   50,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,    9,   60,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   10,   90,   60,   60,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   11,   90,   40,   50,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   12,   70,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   13,   90,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   14,   70,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   15,   60,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   16,   90,   50,   50,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   17,   90,   60,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   18,  100,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   19,  110,   40,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   20,  110,   30,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   21,  120,   30,   30,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   22,  110,   40,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   23,  110,   40,   40,   50,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170105,   24,  120,   40,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    1,  130,   50,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    2,  140,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    3,  140,   40,   40,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    4,  160,   50,   50,   60,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    5,  160,   50,   50,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    6,  150,   60,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    7,  150,   50,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    8,  170,   60,   60,   70,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,    9,  160,   60,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   10,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   11,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   12,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   13,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   14,  180,   60,   60,   80,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   15,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   16,  170,   70,   70,   90,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   17,  170,   80,   80,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   18,  180,   80,   80,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   19,  170,   90,   90,  100,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   20,  190,   90,  100,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   21,  190,  100,   90,  120,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   22,  180,   80,   80,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   23,  180,   90,  100,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
+  209,20170106,   24,  190,   90,   90,  110,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    6,     ,     ,     ,     ,
