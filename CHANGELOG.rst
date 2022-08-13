@@ -2,7 +2,7 @@
 Changelog
 =========
 
-Version 1.5.0
+Version 1.5.1
 =============
 Updated to work with changes to KNMI API.
 
