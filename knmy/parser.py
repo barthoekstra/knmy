@@ -21,59 +21,56 @@ def parse_raw_weather_data(raw):
         data: (DataFrame) pandas dataframe containing the weather measurements for all selected variables (see the
             returned variables dictionary), but always a station number and date in YYYYMMDD format.
     """
-    chunk = _generate_chunks(raw, '# ')
+    raw = raw.splitlines()
 
     # Disclaimer
-    disclaimer_raw = next(chunk)
-    disclaimer = '\n'.join(line.strip('# ') for line in disclaimer_raw)
+    disclaimer_clean = [line.strip('# ').strip('"# ') for line in raw[0:5] if line != '']
+    disclaimer = '\n'.join(disclaimer_clean).strip('# ')
 
-    # Stations list
-    stations_raw = next(chunk)
-    stations_raw = [line.strip('# ') for line in stations_raw]
+    # Metadata
+    data_line = None  # Line number at which data starts
     station_lines = []
+    Variable = namedtuple('Variable', ['Index', 'Abbreviation', 'Description'])
+    variables = {}
+    variable_index = 0
+    header = ''
 
-    for station in stations_raw[1:]:
-        station_attribute = [attribute.strip(":").strip() for attribute in station.split('  ') if attribute != '']
+    for i, line in enumerate(raw[5:]):
+        if not line.startswith('# '):
+            # Apparently data has started, store line number
+            data_line = i + 5
+            break
 
-        try:
-            number, longitude, latitude, altitude, name = station_attribute
-        except ValueError:
-            print('Metadata for station {} is invalid'.format(station_attribute[0]))
-        else:
+        line_start = line.split(' ')[1]
+        if line_start == 'STN':
+            continue
+        elif line_start.isnumeric():
+            # Stations start with a number
+            station_attributes = [attribute.strip() for attribute in line.strip('#').split('  ')]
+            station_attributes = [attribute for attribute in station_attributes if attribute != '']
+            number, longitude, latitude, altitude, name = station_attributes
             station_line = ','.join([number, name, latitude, longitude, altitude])
             station_lines.append(station_line)
+        else:
+            # Variables start with an abbreviation that is not STN
+            variable = [variable.lstrip().rstrip() for variable in line.strip('# ').split(' : ')]
+            if len(variable) == 2:
+                variables.update({variable_index: Variable(variable_index, variable[0], variable[1])})
+                variable_index = variable_index + 1
+            else:
+                # We've reached the header of the CSV section with data
+                header = line.strip('# ').replace(' ', '')
 
+    # Save stations to dataframe
     station_lines = '\n'.join(station_lines)
-
     stations = pd.read_csv(StringIO(station_lines), index_col=0, names=['number', 'name', 'latitude', 'longitude',
                                                                         'altitude'])
 
-    # Variables
-    variables_raw = next(chunk)
-    variables_raw = [line.strip('# ').strip(';') for line in variables_raw]
-
-    Variable = namedtuple('Variable', ['Index', 'Abbreviation', 'Description'])
-    variables = {}
-
-    for index, variable in enumerate(variables_raw):
-        variable_split = variable.split('=')
-        key = variable_split[0].strip()
-        value = '='.join(variable_split[1:]).lstrip()
-        new_variable = {index: Variable(index, key, value)}
-        variables.update(new_variable)
-
-    # Header
-    header_raw = next(chunk)
-    header = header_raw[0].strip('# ').replace(' ', '')
-
-    # Data
-    data_raw = next(chunk)
+    # Data parsing
     records = []
-
-    for record in data_raw:
-        records.append(record.strip('# ').replace(' ', ''))
-
-    records.insert(0, header)
+    for record in raw[data_line:]:
+        values = [value.lstrip().rstrip() for value in record.strip(' ').split(',')]
+        records.append(','.join(values))
 
     data = pd.read_csv(StringIO('\n'.join(records)), names=header.split(','))
 
@@ -97,40 +94,53 @@ def parse_raw_rain_data(raw):
     """
     raw = raw.splitlines()
 
-    disclaimer = '\n'.join(raw[0:5])
-    variables = '\n'.join(raw[6:22])
+    disclaimer_clean = [line.strip('# ').strip('"# ') for line in raw[0:5]]
+    disclaimer = '\n'.join(disclaimer_clean).strip('# ')
 
-    header = raw[23].replace(' ', '') + 'NAME'
+    data_line = None
+    station_lines = []
+    Variable = namedtuple('Variable', ['Index', 'Abbreviation', 'Description'])
+    variables = {}
+    variable_index = 0
+    header = ''
+
+    for i, line in enumerate(raw[5:]):
+        if not line.startswith('# '):
+            # Apparently data has started, store line number
+            data_line = i + 5
+            break
+
+        line_start = line.split(' ')[1]
+
+        if line_start == 'STN':
+            continue
+        elif line_start.isnumeric():
+            # Stations start with a number
+            station_attributes = [attribute.strip() for attribute in line.strip('#').split('  ')]
+            station_attributes = [attribute for attribute in station_attributes if attribute != '']
+            number, name = station_attributes
+            station_line = ','.join([number, name])
+            station_lines.append(station_line)
+        else:
+            # Variables start with an abbreviation that is not STN
+            variable = [variable.lstrip().rstrip() for variable in line.strip('# ').split(' : ')]
+            if len(variable) == 2:
+                variables.update({variable_index: Variable(variable_index, variable[0], variable[1])})
+                variable_index = variable_index + 1
+            else:
+                # We've reached the header of the CSV section with data
+                header = line.strip('# ').replace(' ', '')
+
+    # Save stations to dataframe
+    station_lines = '\n'.join(station_lines)
+    stations = pd.read_csv(StringIO(station_lines), index_col=0, names=['number', 'name'])
+
+    # Data parsing
     records = []
-    for record in raw[24:]:
-        records.append(record.replace('  ', ''))
-    records.insert(0, header)
+    for record in raw[data_line:]:
+        values = [value.lstrip().rstrip() for value in record.strip(' ').split(',')]
+        records.append(','.join(values))
 
-    data = pd.read_csv(StringIO('\n'.join(records)))
+    data = pd.read_csv(StringIO('\n'.join(records)), names=header.split(','))
 
     return disclaimer, variables, data
-
-
-def _generate_chunks(raw, chunk_separator):
-    """ Splits raw data in chunks separated by a separator
-
-    Args:
-        raw: (string) raw output of get_knmi_data function
-        chunk_separator: (string) split raw data in chunks where a line in the raw data equals this separator
-
-    Returns:
-        chunk: (string) chunk of raw data
-    """
-    chunk = []
-
-    for line in raw.splitlines():
-        if line != chunk_separator:
-            chunk.append(line)
-        else:
-            if len(chunk) == 0:
-                continue
-            else:
-                yield chunk
-                chunk = []
-    else:
-        yield chunk
