@@ -2,7 +2,7 @@
 Changelog
 =========
 
-Version 0.0.2
+Version 1.5.0
 =============
 Updated to work with changes to KNMI API.
 
@@ -15,6 +15,6 @@ Data that can be requested via the API has remained the same, but there are seve
 
 If somehow the parser or other functionalities stop working, don't hesitate to open an issue on `GitHub <https://github.com/barthoekstra/knmy>`_.
 
-Version 0.0.1
+Version 1.0.0
 =============
 Initial release.
