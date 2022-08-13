@@ -70,7 +70,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
                     date = start.strftime('%Y%m%d')
                     start = date + hour
                 elif isinstance(start, int):
-                    if len(str(start)) is not 10:
+                    if len(str(start)) != 10:
                         raise ValueError('start should have the following format: yyyymmddhh')
                     start = str(start)
                 else:
@@ -80,7 +80,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
                 if isinstance(start, datetime.datetime) or isinstance(end, datetime.date):
                     start = start.strftime('%Y%m%d')
                 elif isinstance(start, int):
-                    if len(str(start)) is not 8:
+                    if len(str(start)) != 8:
                         raise ValueError('start should have the following format: yyyymmdd')
                     start = str(start)
                 else:
@@ -100,7 +100,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
                     date = end.strftime('%Y%m%d')
                     end = date + hour
                 elif isinstance(end, int):
-                    if len(str(end)) is not 10:
+                    if len(str(end)) != 10:
                         raise ValueError('end should have the following format: yyyymmddhh')
                     end = str(end)
                 else:
@@ -110,7 +110,7 @@ def get_knmi_data(type, stations=None, start=None, end=None, variables=None, ins
                 if isinstance(end, datetime.datetime) or isinstance(end, datetime.date):
                     end = end.strftime('%Y%m%d')
                 elif isinstance(end, int):
-                    if len(str(end)) is not 8:
+                    if len(str(end)) != 8:
                         raise ValueError('end should have the following format: yyyymmdd')
                     end = str(end)
                 else:
