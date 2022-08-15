@@ -1,6 +1,6 @@
 knmy
 ===============================
-[![Build Status](https://travis-ci.org/barthoekstra/knmy.svg?branch=master)](https://travis-ci.org/barthoekstra/knmy)
+[![CI](https://github.com/barthoekstra/knmy/actions/workflows/python-app.yml/badge.svg)](https://github.com/barthoekstra/knmy/actions/workflows/python-app.yml)
 [![Coverage Status](https://coveralls.io/repos/github/barthoekstra/knmy/badge.svg?branch=master)](https://coveralls.io/github/barthoekstra/knmy?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/knmy/badge/?version=latest)](http://knmy.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/knmy.svg)](https://badge.fury.io/py/knmy)
