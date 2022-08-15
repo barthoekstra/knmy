@@ -5,7 +5,7 @@ import datetime
 from knmy.parser import parse_raw_rain_data, parse_raw_weather_data
 
 __title__ = 'knmy'
-__version__ = '1.0.0'
+__version__ = '1.5.1'
 __author__ = 'Bart Hoekstra'
 __license__ = 'MIT'
 
