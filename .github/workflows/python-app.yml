@@ -32,6 +32,8 @@ jobs:
         run: |
           pytest
       - name: Report coverage
+        env: 
+          GITHUB_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
         run: |
           pip install coveralls
           coverage run --source=knmy setup.py test
