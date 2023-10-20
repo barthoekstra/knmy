@@ -73,6 +73,9 @@ can be selected individually, but also in the groups below. If you are unsure of
 functions without providing variables and read the unpacked list of variables (see `Example usage`_).
 
 Variable groups:
+-----------------
+
+** Daily Data**
 
 * ``ALL`` =  All  variables (**Default**)
 * ``WIND`` = DDVEC:FG:FHX:FHX:FX Wind
@@ -82,6 +85,16 @@ Variable groups:
 * ``PRES`` = PG:PGX:PGN Pressure at sea level
 * ``VICL`` = VVN:VVX:NG Visibility and cloud cover
 * ``MSTR`` = UG:UX:UN Humidity
+
+** Hourly Data**
+
+* ``WIND`` = DD:FH:FF:FX Wind
+* ``TEMP`` = T:T10N:TD Temperature
+* ``SUNR`` = SQ:Q Sunshine duration and global radiation
+* ``PRCP`` = DR:RH Precipitation and potential evaporation
+* ``VICL`` = VV:N:U Visibility, cloud cover and relative humidity
+* ``WEATHER`` = M:R:S:O:Y:WW Weather phenomena, weather types
+* ``ALL`` = all variables
 
 ``inseason`` is a boolean. If set to `True`, the function will only return data within the month-date combination for
 all given years (see `Example usage`_).
