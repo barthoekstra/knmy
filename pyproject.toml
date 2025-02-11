@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "knmy"
-version = "1.5.1"
+version = "1.5.2"
 authors = [
   { name="Bart Hoekstra", email="barthoekstra@gmail.com" },
 ]
 description = "Python package for downloading and processing weather data from the automated weather stations of the Dutch Meteorological Institute (KNMI)."
 readme = "README.md"
 license = { file="LICENSE.md" }
-requires-python = ">=3.5"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: BSD License",

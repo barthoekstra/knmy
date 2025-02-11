@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = '1.5.1'
+__version__ = '1.5.2'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -20,7 +20,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startsw
 setup(
     name='knmy',
     version=__version__,
-    description='Python package for downloading and processing weather data from the automated weather stations of the Dutch Meteorological Institute (KNMI).',
+    description='Python package for downloading and processing weather data from the automated weather stations of the Netherlands Meteorological Institute (KNMI).',
     long_description=long_description,
     url='https://github.com/barthoekstra/knmy',
     download_url='https://github.com/barthoekstra/knmy/tarball/' + __version__,
