@@ -37,6 +37,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
         run: |
-          pip install coveralls
+          pip install pytest-cov coveralls
           pytest --cov=knmy --cov-report=xml
           coveralls --verbose
