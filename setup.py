@@ -33,7 +33,6 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    setup_requires=['pytest-runner'],
     extras_require={'testing': ['mock', 'pytest', 'sh>=1.08']},
     author='Bart Hoekstra',
     install_requires=install_requires,
