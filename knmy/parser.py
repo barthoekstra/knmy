@@ -4,7 +4,7 @@ from collections import namedtuple
 
 
 def parse_raw_weather_data(raw):
-    """ Parses raw weather data
+    """Parses raw weather data
 
     Parses raw weather data from KNMI's automated weather stations and returns the disclaimer, a dict of variables
     and pandas dataframes of the stations and the weather measurements.
@@ -24,60 +24,80 @@ def parse_raw_weather_data(raw):
     raw = raw.splitlines()
 
     # Disclaimer
-    disclaimer_clean = [line.strip('# ').strip('"# ') for line in raw[0:5] if line != '']
-    disclaimer = '\n'.join(disclaimer_clean).strip('# ')
+    disclaimer_clean = [
+        line.strip("# ").strip('"# ') for line in raw[0:5] if line != ""
+    ]
+    disclaimer = "\n".join(disclaimer_clean).strip("# ")
 
     # Metadata
     data_line = None  # Line number at which data starts
     station_lines = []
-    Variable = namedtuple('Variable', ['Index', 'Abbreviation', 'Description'])
+    Variable = namedtuple("Variable", ["Index", "Abbreviation", "Description"])
     variables = {}
     variable_index = 0
-    header = ''
+    header = ""
 
     for i, line in enumerate(raw[5:]):
-        if not line.startswith('# '):
+        if not line.startswith("# "):
             # Apparently data has started, store line number
             data_line = i + 5
             break
 
-        line_start = line.split(' ')[1]
-        if line_start == 'STN':
+        line_start = line.split(" ")[1]
+        if line_start == "STN":
             continue
         elif line_start.isnumeric():
             # Stations start with a number
-            station_attributes = [attribute.strip() for attribute in line.strip('#').split('  ')]
-            station_attributes = [attribute for attribute in station_attributes if attribute != '']
+            station_attributes = [
+                attribute.strip() for attribute in line.strip("#").split("  ")
+            ]
+            station_attributes = [
+                attribute for attribute in station_attributes if attribute != ""
+            ]
             number, longitude, latitude, altitude, name = station_attributes
-            station_line = ','.join([number, name, latitude, longitude, altitude])
+            station_line = ",".join([number, name, latitude, longitude, altitude])
             station_lines.append(station_line)
         else:
             # Variables start with an abbreviation that is not STN
-            variable = [variable.lstrip().rstrip() for variable in line.strip('# ').split(' : ')]
+            variable = [
+                variable.lstrip().rstrip() for variable in line.strip("# ").split(" : ")
+            ]
             if len(variable) == 2:
-                variables.update({variable_index: Variable(variable_index, variable[0], variable[1])})
+                variables.update(
+                    {variable_index: Variable(variable_index, variable[0], variable[1])}
+                )
                 variable_index = variable_index + 1
             else:
-                # We've reached the header of the CSV section with data
-                header = line.strip('# ').replace(' ', '')
+                raw_header = line.strip("# ").replace(" ", "")
+                raw_header = raw_header.split(",")
+
+                # Remove duplicate headers to avoid error
+                header = []
+                for item in raw_header:
+                    if item not in header:
+                        header.append(item)
 
     # Save stations to dataframe
-    station_lines = '\n'.join(station_lines)
-    stations = pd.read_csv(StringIO(station_lines), index_col=0, names=['number', 'name', 'latitude', 'longitude',
-                                                                        'altitude'])
+    station_lines = "\n".join(station_lines)
+    stations = pd.read_csv(
+        StringIO(station_lines),
+        index_col=0,
+        names=["number", "name", "latitude", "longitude", "altitude"],
+    )
 
     # Data parsing
     records = []
     for record in raw[data_line:]:
-        values = [value.lstrip().rstrip() for value in record.strip(' ').split(',')]
-        records.append(','.join(values))
+        values = [value.lstrip().rstrip() for value in record.strip(" ").split(",")]
+        records.append(",".join(values))
 
-    data = pd.read_csv(StringIO('\n'.join(records)), names=header.split(','))
+    data = pd.read_csv(StringIO("\n".join(records)), names=header)
 
     return disclaimer, stations, variables, data
 
+
 def parse_raw_rain_data(raw):
-    """ Parses raw daily rain data
+    """Parses raw daily rain data
 
     Parses raw daily rain data from KNMI's automated rain measurement stations and returns the disclaimer, variables and
     a dataframe of the rain data.
@@ -94,53 +114,63 @@ def parse_raw_rain_data(raw):
     """
     raw = raw.splitlines()
 
-    disclaimer_clean = [line.strip('# ').strip('"# ') for line in raw[0:5]]
-    disclaimer = '\n'.join(disclaimer_clean).strip('# ')
+    disclaimer_clean = [line.strip("# ").strip('"# ') for line in raw[0:5]]
+    disclaimer = "\n".join(disclaimer_clean).strip("# ")
 
     data_line = None
     station_lines = []
-    Variable = namedtuple('Variable', ['Index', 'Abbreviation', 'Description'])
+    Variable = namedtuple("Variable", ["Index", "Abbreviation", "Description"])
     variables = {}
     variable_index = 0
-    header = ''
+    header = ""
 
     for i, line in enumerate(raw[5:]):
-        if not line.startswith('# '):
+        if not line.startswith("# "):
             # Apparently data has started, store line number
             data_line = i + 5
             break
 
-        line_start = line.split(' ')[1]
+        line_start = line.split(" ")[1]
 
-        if line_start == 'STN':
+        if line_start == "STN":
             continue
         elif line_start.isnumeric():
             # Stations start with a number
-            station_attributes = [attribute.strip() for attribute in line.strip('#').split('  ')]
-            station_attributes = [attribute for attribute in station_attributes if attribute != '']
+            station_attributes = [
+                attribute.strip() for attribute in line.strip("#").split("  ")
+            ]
+            station_attributes = [
+                attribute for attribute in station_attributes if attribute != ""
+            ]
             number, name = station_attributes
-            station_line = ','.join([number, name])
+            station_line = ",".join([number, name])
             station_lines.append(station_line)
         else:
             # Variables start with an abbreviation that is not STN
-            variable = [variable.lstrip().rstrip() for variable in line.strip('# ').split(' : ')]
+            variable = [
+                variable.lstrip().rstrip() for variable in line.strip("# ").split(" : ")
+            ]
             if len(variable) == 2:
-                variables.update({variable_index: Variable(variable_index, variable[0], variable[1])})
+                variables.update(
+                    {variable_index: Variable(variable_index, variable[0], variable[1])}
+                )
                 variable_index = variable_index + 1
             else:
                 # We've reached the header of the CSV section with data
-                header = line.strip('# ').replace(' ', '')
+                header = line.strip("# ").replace(" ", "")
 
     # Save stations to dataframe
-    station_lines = '\n'.join(station_lines)
-    stations = pd.read_csv(StringIO(station_lines), index_col=0, names=['number', 'name'])
+    station_lines = "\n".join(station_lines)
+    stations = pd.read_csv(
+        StringIO(station_lines), index_col=0, names=["number", "name"]
+    )
 
     # Data parsing
     records = []
     for record in raw[data_line:]:
-        values = [value.lstrip().rstrip() for value in record.strip(' ').split(',')]
-        records.append(','.join(values))
+        values = [value.lstrip().rstrip() for value in record.strip(" ").split(",")]
+        records.append(",".join(values))
 
-    data = pd.read_csv(StringIO('\n'.join(records)), names=header.split(','))
+    data = pd.read_csv(StringIO("\n".join(records)), names=header.split(","))
 
     return disclaimer, variables, data
