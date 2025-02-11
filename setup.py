@@ -18,25 +18,9 @@ install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startswith('git+')]
 
 setup(
-    name='knmy',
-    version=__version__,
-    description='Python package for downloading and processing weather data from the automated weather stations of the Netherlands Meteorological Institute (KNMI).',
-    long_description=long_description,
-    url='https://github.com/barthoekstra/knmy',
-    download_url='https://github.com/barthoekstra/knmy/tarball/' + __version__,
-    license='BSD',
-    classifiers=[
-      'Development Status :: 3 - Alpha',
-      'Intended Audience :: Developers',
-      'Programming Language :: Python :: 3',
-    ],
-    keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
     extras_require={'testing': ['mock', 'pytest', 'sh>=1.08']},
-    author='Bart Hoekstra',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email='barthoekstra@gmail.com',
-    python_requires='>=3.8',
 )

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "knmy"
 version = "1.5.2"
 authors = [
-  { name="Bart Hoekstra", email="barthoekstra@gmail.com" },
+  {name="Bart Hoekstra", email="barthoekstra@gmail.com"},
 ]
 description = "Python package for downloading and processing weather data from the automated weather stations of the Dutch Meteorological Institute (KNMI)."
 readme = "README.md"
@@ -17,6 +17,7 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
 ]
+keywords = ["knmi", "weather station", "API", "hourly", "daily", "wind", "rain", "temperature", "climate", "weather"]
 
 [project.urls]
 "Homepage" = "https://github.com/barthoekstra/knmy"
