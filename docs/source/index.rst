@@ -1,7 +1,7 @@
 knmy - A simple Python wrapper for Dutch weather data from KNMI
 ===============================================================
-.. image:: https://travis-ci.org/barthoekstra/knmy.svg?branch=master
-    :target: https://travis-ci.org/barthoekstra/knmy
+.. image:: https://github.com/barthoekstra/knmy/actions/workflows/python-app.yml/badge.svg?branch=master
+    :target: https://github.com/barthoekstra/knmy/actions/workflows/python-app.yml
 .. image:: https://coveralls.io/repos/github/barthoekstra/knmy/badge.svg?branch=master
     :target: https://coveralls.io/github/barthoekstra/knmy?branch=master
 .. image:: https://readthedocs.org/projects/knmy/badge/?version=latest
@@ -74,9 +74,9 @@ functions without providing variables and read the unpacked list of variables (s
 
 Variable groups:
 -----------------
-
-** Daily Data**
-
+^^^^^^^^^^^
+Daily Data
+^^^^^^^^^^^
 * ``ALL`` =  All  variables (**Default**)
 * ``WIND`` = DDVEC:FG:FHX:FHX:FX Wind
 * ``TEMP`` = TG:TN:TX:T10N Temperature
@@ -86,7 +86,9 @@ Variable groups:
 * ``VICL`` = VVN:VVX:NG Visibility and cloud cover
 * ``MSTR`` = UG:UX:UN Humidity
 
-** Hourly Data**
+^^^^^^^^^^^
+Hourly Data
+^^^^^^^^^^^
 
 * ``WIND`` = DD:FH:FF:FX Wind
 * ``TEMP`` = T:T10N:TD Temperature
