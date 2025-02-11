@@ -18,7 +18,20 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 keywords = ["knmi", "weather station", "API", "hourly", "daily", "wind", "rain", "temperature", "climate", "weather"]
+dynamic = ["dependencies"]
 
 [project.urls]
 "Homepage" = "https://github.com/barthoekstra/knmy"
 "Bug Tracker" = "https://github.com/barthoekstra/knmy/issues"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.optional-dependencies]
+testing = ["mock", "pytest", "sh>=1.08"]
+
+[tool.setuptools.packages]
+find = { exclude = ["docs", "tests*"] }
+
+[tool.setuptools]
+include-package-data = true
