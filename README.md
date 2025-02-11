@@ -6,7 +6,7 @@ knmy
 [![PyPI version](https://badge.fury.io/py/knmy.svg)](https://badge.fury.io/py/knmy)
 
 
-version number: 1.5.1
+version number: 1.5.2
 author: Bart Hoekstra
 
 Overview

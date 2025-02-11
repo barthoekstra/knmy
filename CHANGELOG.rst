@@ -2,6 +2,12 @@
 Changelog
 =========
 
+Version 1.5.2
+=============
+API Updates and some documentation additions.
+
+If somehow the parser or other functionalities stop working, don't hesitate to open an issue on `GitHub <https://github.com/barthoekstra/knmy>`_.
+
 Version 1.5.1
 =============
 Updated to work with changes to KNMI API.
