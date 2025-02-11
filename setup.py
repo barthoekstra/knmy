@@ -20,7 +20,6 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startsw
 setup(
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    extras_require={'testing': ['mock', 'pytest', 'sh>=1.08']},
     install_requires=install_requires,
     dependency_links=dependency_links,
 )
